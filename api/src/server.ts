@@ -30,7 +30,7 @@ export type Context = {
     path: "/",
     cors: {
       credentials: true,
-      origin: ["http://localhost:3001"],
+      origin: true,
     },
   });
 

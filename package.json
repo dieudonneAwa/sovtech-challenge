@@ -1,0 +1,26 @@
+{
+  "name": "sovtech-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "cd api && yarn start",
+    "web": "cd web && yarn start",
+    "prestart": "cd api && yarn build",
+    "start": "concurrently \"yarn api\" \"yarn web\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dieudonneAwa/sovtech-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dieudonneAwa/sovtech-challenge/issues"
+  },
+  "homepage": "https://github.com/dieudonneAwa/sovtech-challenge#readme",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
