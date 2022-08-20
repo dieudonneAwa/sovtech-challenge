@@ -14,14 +14,14 @@ export const resolvers = {
       }
     },
 
-    getPerson: async (
+    getPersonByName: async (
       _parent: any,
-      { search }: { search: string },
+      { name }: { name: string },
       context: Context
     ) => {
       try {
-        const personResponse = await context.dataSources.swapi.getPerson(
-          search
+        const personResponse = await context.dataSources.swapi.getPersonByName(
+          name
         );
         return personResponse;
       } catch (error) {

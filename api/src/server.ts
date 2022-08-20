@@ -25,7 +25,14 @@ export type Context = {
   });
 
   await server.start();
-  server.applyMiddleware({ app });
+  server.applyMiddleware({
+    app,
+    path: "/",
+    cors: {
+      credentials: true,
+      origin: ["http://localhost:3001"],
+    },
+  });
 
   app.listen({ port: 2000 }, () =>
     console.log(`🚀 Server ready at http://localhost:2000${server.graphqlPath}`)

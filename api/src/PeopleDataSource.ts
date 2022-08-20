@@ -11,8 +11,8 @@ class PeopleDataSource extends RESTDataSource {
     return this.get<GetPeopleResponse>(`people/?page=${page}`);
   }
 
-  async getPerson(search: string): Promise<Person> {
-    const peopleResponse = await this.get<GetPeopleResponse>(`people/?search=${search}`);
+  async getPersonByName(name: string): Promise<Person> {
+    const peopleResponse = await this.get<GetPeopleResponse>(`people/?search=${name}`);
     return peopleResponse.results[0];
   }
 }

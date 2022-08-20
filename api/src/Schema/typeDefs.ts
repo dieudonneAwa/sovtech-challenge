@@ -3,7 +3,7 @@ import { gql } from "apollo-server-express";
 export const typeDefs = gql`
   type Person {
     name: String!
-    height: Int!
+    height: String!
     mass: String!
     gender: String!
     homeworld: String!
@@ -18,6 +18,6 @@ export const typeDefs = gql`
 
   type Query {
     getPeople(page: Int): GetPeopleResponse!
-    getPerson(search: String!): Person!
+    getPersonByName(name: String!): Person!
   }
 `;
